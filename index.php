@@ -8,6 +8,7 @@
 
     .todo_wrapper {
         background-color: white;
+        border-radius: 15px;
     }
 </style>
 
@@ -23,11 +24,11 @@
 
     <div id="app" class="container">
         <div class="row justify-content-center align-items-center">
+            <h1 class="todo_title text-center m-0 py-4">
+                To do List
+            </h1>
             <div class="todo_wrapper p-3">
                 <div class="todo_head">
-                    <h1 class="todo_title text-center">
-                        To do List
-                    </h1>
                 </div>
                 <div class="todo_elements">
                     <ul class="list-group">
