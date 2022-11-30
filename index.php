@@ -45,9 +45,9 @@
                 </div>
             </div>
             <div class="search_box p-0 my-3">
-                <form action="server.php" method="post" onsubmit="return putNewTasks()">
+                <form action="server.php" method="post">
                     <div class="input-group input-group-lg">
-                        <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" name="newTask" id="newTask">
+                        <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" name="newTask" @keyup.enter="putNewTasks" id="newTask">
                         <button class="inserisci_button" type="submit">Inserisci</button>
                     </div>
                 </form>

@@ -4,7 +4,8 @@ createApp({
   data() {
     return {
       tasks : [],
-      api_url: "server.php"
+      api_url: "server.php",
+      task: ""
     }
   },
   methods : {
@@ -17,6 +18,17 @@ createApp({
         .catch(error => {
             console.error(error.message);
         })
+    },
+    putNewTasks(url) {
+        const data = {
+            task
+        }
+        axios.post(url, data,
+        {
+            headers: {"Content-Type" : "multipart/form-data"}
+        }) .then((response) => {
+            this.tasks = response.data
+        });
     }
   },
   mounted() {
