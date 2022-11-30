@@ -1,6 +1,6 @@
-import { createApp } from 'vue'
+let { createApp } = Vue
 
-const app = createApp({
+createApp({
   data() {
     return {
       tasks : [],
@@ -9,8 +9,7 @@ const app = createApp({
   },
   methods : {
     putTasks(url) {
-    axios
-        .get(url)
+        axios.get(url)
         .then(response => {
            // console.log(response);
            this.tasks = response.data;
@@ -23,6 +22,4 @@ const app = createApp({
   mounted() {
     this.putTasks(this.api_url);
   }
-})
-
-app.mount('#app')
+}).mount('#app')

@@ -19,22 +19,29 @@
     <title>To do List</title>
 </head>
 
-<body id="app">
+<body>
 
-    <div class="container">
-        <div class="todo_wrapper p-3">
-            <div class="todo_elements">
-                <h1 class="todo_title text-center">
-                    To do List
-                </h1>
+    <div id="app" class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="todo_wrapper p-3">
+                <div class="todo_head">
+                    <h1 class="todo_title text-center">
+                        To do List
+                    </h1>
+                </div>
+                <div class="todo_elements">
+                    <ul class="list-group">
+                        <li v-for="task in tasks" class="list-group-item">{{task}}</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 
     <!--Scripts-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
     <!--//Scripts-->
