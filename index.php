@@ -10,6 +10,14 @@
         background-color: white;
         border-radius: 15px;
     }
+
+    .inserisci_button {
+        background-color: white;
+        border: 0;
+        padding: 15px;
+        border-radius: 5px;
+        margin-left: 15px;
+    }
 </style>
 
 <head>
@@ -35,6 +43,14 @@
                         <li v-for="task in tasks" class="list-group-item">{{task}}</li>
                     </ul>
                 </div>
+            </div>
+            <div class="search_box p-0 my-3">
+                <form action="server.php">
+                    <div class="input-group input-group-lg">
+                        <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                        <button class="inserisci_button" type="submit">Inserisci</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
