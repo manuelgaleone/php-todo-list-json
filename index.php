@@ -40,7 +40,7 @@
                 </div>
                 <div class="todo_elements">
                     <ul class="list-group">
-                        <!-- <li v-for="task in tasks" class="list-group-item">{{task}}</li> -->
+                        <li v-for="task in tasks" class="list-group-item">{{task}}</li>
                     </ul>
                 </div>
             </div>
