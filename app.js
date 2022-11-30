@@ -17,7 +17,17 @@ createApp({
         .catch(error => {
             console.error(error.message);
         })
-    }
+    },
+    putNewTasks(url) {
+        axios.post(url)
+        .then(response => {
+           // console.log(response);
+           this.tasks = response.data;
+        })
+        .catch(error => {
+            console.error(error.message);
+        })
+    },
   },
   mounted() {
     this.putTasks(this.api_url);

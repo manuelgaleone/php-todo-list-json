@@ -40,14 +40,14 @@
                 </div>
                 <div class="todo_elements">
                     <ul class="list-group">
-                        <li v-for="task in tasks" class="list-group-item">{{task}}</li>
+                        <!-- <li v-for="task in tasks" class="list-group-item">{{task}}</li> -->
                     </ul>
                 </div>
             </div>
             <div class="search_box p-0 my-3">
-                <form action="server.php">
+                <form action="server.php" method="post" onsubmit="return putNewTasks()">
                     <div class="input-group input-group-lg">
-                        <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                        <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" name="newTask" id="newTask">
                         <button class="inserisci_button" type="submit">Inserisci</button>
                     </div>
                 </form>
